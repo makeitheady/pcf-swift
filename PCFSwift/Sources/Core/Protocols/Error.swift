@@ -14,7 +14,7 @@ private enum SessionErrorCode: Int {
 /**
  *  Error protocol.
  */
-public protocol Error: Swift.Error {
+public protocol Error: Swift.Error, LocalizedError {
 
     /// An error identifier used for API error.
     var code: Int { get }
