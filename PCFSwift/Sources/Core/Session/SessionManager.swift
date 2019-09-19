@@ -52,7 +52,7 @@ extension SessionManager {
 
     public func isSessionError(error: Swift.Error) -> Bool {
         guard let error = error as? Error else {
-            print("SessionManager - isSessionError Guard: \(error)")
+            print("SessionManager - isSessionError Guard")
             return false
         }
 
