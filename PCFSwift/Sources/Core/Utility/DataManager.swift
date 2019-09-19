@@ -49,6 +49,7 @@ extension DataManager {
         } else {
             httpClient.perform(request: request) { (response, error) in
                 if let error = error {
+                    print("DataManager - perform - isSessionError: \(self.sessionManager.isSessionError(error: error))")
                     if self.sessionManager.isSessionError(error: error) {
                         self.sessionManager.resetSession(request: request) { response, error in
                             self.decodeResponse((response, error), completion: completion)
