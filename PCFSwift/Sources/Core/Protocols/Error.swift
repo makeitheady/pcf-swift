@@ -14,7 +14,7 @@ private enum SessionErrorCode: Int {
 /**
  *  Error protocol.
  */
-open protocol Error: Swift.Error, LocalizedError {
+public protocol Error: Swift.Error {
 
     /// An error identifier used for API error.
     var code: Int { get }
@@ -24,12 +24,12 @@ open protocol Error: Swift.Error, LocalizedError {
 
 }
 
-open extension Error {
+public extension Error {
 
     /// Indicates if the error is a session error. Can be useful to know if a new session has to be generated.
     ///
     /// - Returns: `true` if the error is related to the session. `false` if not.
-    open func isSessionError() -> Bool {
+    public func isSessionError() -> Bool {
         let isSessionInactive = code == SessionErrorCode.inactiveSession.rawValue
         let isSessionInvalid = code == SessionErrorCode.invalidSession.rawValue
 
