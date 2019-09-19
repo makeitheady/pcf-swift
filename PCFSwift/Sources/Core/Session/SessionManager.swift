@@ -51,10 +51,12 @@ public protocol SessionManager {
 extension SessionManager {
 
     public func isSessionError(error: Swift.Error) -> Bool {
-        guard let error = error as? PCFSwift.Error else {
+        guard let error = error as? Error else {
+            print("SessionManager - isSessionError Guard: \(error)")
             return false
         }
 
+        print("SessionManager - isSessionError Return: \(error.isSessionError())")
         return error.isSessionError()
     }
 
