@@ -33,6 +33,12 @@ This framework provides protocols and structs to support developers with the imp
     onepassword.dependency '1PasswordExtension', '~> 1.8'
     onepassword.dependency 'PCFSwift/Core'
   end
+  
+  s.subspec 'SwiftyBeaver' do |swiftybeaver|
+    swiftybeaver.source_files = 'PCFSwift/Sources/LoggerX/**/*'
+    swiftybeaver.dependency 'SwiftyBeaver'
+    swiftybeaver.dependency 'PCFSwift/Core'
+  end
 
   s.subspec 'AddressGeocoder' do |geocoder|
     geocoder.dependency 'AddressGeocoder'

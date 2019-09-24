@@ -712,6 +712,14 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		7BE8791B233A5149009E63D9 /* LoggerX */ = {
+			isa = PBXGroup;
+			children = (
+				7BE87919233A4ACA009E63D9 /* LoggerX.swift */,
+			);
+			path = LoggerX;
+			sourceTree = "<group>";
+		};
 		8E0149E51E81C5A700B21E53 /* Product */ = {
 			isa = PBXGroup;
 			children = (
@@ -1052,7 +1060,6 @@
 		8E973A691E6A12CD000BF6B3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				7BE87919233A4ACA009E63D9 /* LoggerX.swift */,
 				2FBAB4071F54C431000B6FE5 /* PCFNotification.swift */,
 				8E4B4EF01E9435B5004E6F73 /* Cart */,
 				8E973A6A1E6A12CD000BF6B3 /* Models */,
@@ -1297,6 +1304,7 @@
 		C25A78B81CDA4CD700D4EEBA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				7BE8791B233A5149009E63D9 /* LoggerX */,
 				8E3F18521E9C09B00059E7D9 /* 1Password */,
 				8E973A661E6A12CD000BF6B3 /* Alamofire */,
 				8E973A691E6A12CD000BF6B3 /* Core */,
