@@ -8,6 +8,7 @@ def shared_pods
 	pod 'PCFSwift/TouchID', :path => './'
 	pod 'PCFSwift/Wishlist', :path => './'
 	pod 'PCFSwift/1Password', :path => './'
+    pod 'PCFSwift/LoggerX', :path => './'
 	pod 'PCFSwift/EnvironmentSwitcher', :path => './'
 	pod 'PCFSwift/KeychainManager', :path => './'
 	pod 'PCFSwift/KillSwitch', :path => './'
