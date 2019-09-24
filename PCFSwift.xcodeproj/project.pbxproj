@@ -586,7 +586,6 @@
 				607FACE81AFB9204008FA782 /* Tests */,
 				0892BDF91CD2AE8D006B9B72 /* PCFSwift.h */,
 				0892BDFB1CD2AE8D006B9B72 /* Info.plist */,
-				7BE87919233A4ACA009E63D9 /* LoggerX.swift */,
 			);
 			path = PCFSwift;
 			sourceTree = "<group>";
@@ -1053,6 +1052,7 @@
 		8E973A691E6A12CD000BF6B3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				7BE87919233A4ACA009E63D9 /* LoggerX.swift */,
 				2FBAB4071F54C431000B6FE5 /* PCFNotification.swift */,
 				8E4B4EF01E9435B5004E6F73 /* Cart */,
 				8E973A6A1E6A12CD000BF6B3 /* Models */,

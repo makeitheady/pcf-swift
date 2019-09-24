@@ -52,9 +52,10 @@ extension DataManager {
                     LoggerX.log.error("sessionID: \(sessionManager.sessionHeaders) error: \(error)")
                     if self.sessionManager.isSessionError(error: error) {
                         self.sessionManager.resetSession(request: request) { response, error in
-                            if let response = response {
-                                let model = try decoder.decode(T.self, from: data)
-                                LoggerX.log.debug(model)
+                            if let response = response, let data = response.data as? Data {
+                                if let model = try? self.decoder.decode(T.self, from: data) {
+                                    LoggerX.log.debug(model)
+                                }
                             }
                             self.decodeResponse((response, error), completion: completion)
                         }
@@ -84,9 +85,10 @@ extension DataManager {
                     LoggerX.log.error("sessionID: \(sessionManager.sessionHeaders) error: \(error)")
                     if self.sessionManager.isSessionError(error: error) {
                         self.sessionManager.resetSession(request: request) { response, error in
-                            if let response = response {
-                                let model = try decoder.decode([T].self, from: data)
-                                LoggerX.log.debug(model)
+                            if let response = response, let data = response.data as? Data {
+                                if let model = try? self.decoder.decode([T].self, from: data) {
+                                    LoggerX.log.debug(model)
+                                }
                             }
                             self.decodeResponse((response, error), completion: completion)
                         }
