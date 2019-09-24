@@ -49,9 +49,13 @@ extension DataManager {
         } else {
             httpClient.perform(request: request) { (response, error) in
                 if let error = error {
-                    print("DataManager - perform - isSessionError: \(self.sessionManager.isSessionError(error: error))")
+                    LoggerX.log.error("sessionID: \(sessionManager.sessionHeaders) error: \(error)")
                     if self.sessionManager.isSessionError(error: error) {
                         self.sessionManager.resetSession(request: request) { response, error in
+                            if let response = response {
+                                let model = try decoder.decode(T.self, from: data)
+                                LoggerX.log.debug(model)
+                            }
                             self.decodeResponse((response, error), completion: completion)
                         }
                     } else {
@@ -77,8 +81,13 @@ extension DataManager {
         } else {
             httpClient.perform(request: request) { (response, error) in
                 if let error = error {
+                    LoggerX.log.error("sessionID: \(sessionManager.sessionHeaders) error: \(error)")
                     if self.sessionManager.isSessionError(error: error) {
                         self.sessionManager.resetSession(request: request) { response, error in
+                            if let response = response {
+                                let model = try decoder.decode([T].self, from: data)
+                                LoggerX.log.debug(model)
+                            }
                             self.decodeResponse((response, error), completion: completion)
                         }
                     } else {

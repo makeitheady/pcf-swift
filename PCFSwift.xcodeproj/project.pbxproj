@@ -44,6 +44,7 @@
 		54F2661B1EB6F3B9005FF654 /* SortInformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F2661A1EB6F3B9005FF654 /* SortInformationTests.swift */; };
 		54F2661D1EB6F492005FF654 /* ProductSearchCriteriaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F2661C1EB6F492005FF654 /* ProductSearchCriteriaTests.swift */; };
 		54F266211EB77AB7005FF654 /* SingleProductSearchPage2.json in Resources */ = {isa = PBXBuildFile; fileRef = 54F266201EB77AB7005FF654 /* SingleProductSearchPage2.json */; };
+		7BE8791A233A4ACA009E63D9 /* LoggerX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE87919233A4ACA009E63D9 /* LoggerX.swift */; };
 		8E0149DA1E771D7200B21E53 /* OrderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0149D91E771D7200B21E53 /* OrderDetail.swift */; };
 		8E0149DC1E772D9100B21E53 /* PCFOrderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0149DB1E772D9100B21E53 /* PCFOrderDetail.swift */; };
 		8E0149E21E7994C900B21E53 /* OrderDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0149E11E7994C900B21E53 /* OrderDetailTests.swift */; };
@@ -313,6 +314,7 @@
 		54F266201EB77AB7005FF654 /* SingleProductSearchPage2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SingleProductSearchPage2.json; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* PCFSwift_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PCFSwift_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BE87919233A4ACA009E63D9 /* LoggerX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerX.swift; sourceTree = "<group>"; };
 		8E0149D91E771D7200B21E53 /* OrderDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetail.swift; sourceTree = "<group>"; };
 		8E0149DB1E772D9100B21E53 /* PCFOrderDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCFOrderDetail.swift; sourceTree = "<group>"; };
 		8E0149E11E7994C900B21E53 /* OrderDetailTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailTests.swift; sourceTree = "<group>"; };
@@ -584,6 +586,7 @@
 				607FACE81AFB9204008FA782 /* Tests */,
 				0892BDF91CD2AE8D006B9B72 /* PCFSwift.h */,
 				0892BDFB1CD2AE8D006B9B72 /* Info.plist */,
+				7BE87919233A4ACA009E63D9 /* LoggerX.swift */,
 			);
 			path = PCFSwift;
 			sourceTree = "<group>";
@@ -1354,7 +1357,6 @@
 				0892BDF41CD2AE8D006B9B72 /* Headers */,
 				0892BDF51CD2AE8D006B9B72 /* Resources */,
 				0892BE051CD2BEC7006B9B72 /* ShellScript */,
-				F0729C91B66256246ED64431 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1374,7 +1376,6 @@
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
 				AA9B2CD0238E9E5864C4BFD8 /* [CP] Embed Pods Frameworks */,
-				F4FECC908A19832BCACA4FBA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1435,6 +1436,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -1600,36 +1602,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F0729C91B66256246ED64431 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PCFSwift/Pods-PCFSwift-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F4FECC908A19832BCACA4FBA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PCFSwift_Tests/Pods-PCFSwift_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1641,6 +1613,7 @@
 				8E78A44E1E6263C60089258F /* TouchIDManager.swift in Sources */,
 				8E973AC71E6A12CD000BF6B3 /* HTTPClient.swift in Sources */,
 				8E973ABF1E6A12CD000BF6B3 /* PCFProduct.swift in Sources */,
+				7BE8791A233A4ACA009E63D9 /* LoggerX.swift in Sources */,
 				8E6778541EF47F6D00AA8771 /* PCFWishlistItem.swift in Sources */,
 				0823D9591CD421DF0001FA5A /* TestError.swift in Sources */,
 				B51823091E721299007BA9EF /* NavigationDataManager.swift in Sources */,
